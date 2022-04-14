@@ -91,7 +91,7 @@
               method: "POST",
               url: "/shiro/cust-do/custList",
               data: {
-                page: this.offset,
+                page: this.currentPage,
                 size: this.limit
               },
               headers: {

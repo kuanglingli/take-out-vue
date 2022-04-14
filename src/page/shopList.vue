@@ -186,7 +186,7 @@
               method: "POST",
               url: "/shiro/shop-do/shopList",
               data: {
-                page: this.offset,
+                page: this.currentPage,
                 size: this.limit
               },
               headers: {

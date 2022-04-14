@@ -427,7 +427,7 @@
                 method: "POST",
                 url: "/shiro/order-do/page",
                 data: {
-                  page: this.offset,
+                  page: this.currentPage,
                   size: this.limit
                 },
                 headers: {

@@ -282,7 +282,7 @@
       watch:{
       $route(){
         //跳转到该页面后需要进行的操作
-        this.getItems();
+        // this.getItems();
       }
     },
       methods: {
@@ -291,7 +291,7 @@
             method: "POST",
             url: "/shiro/item-do/page",
             data: {
-              page: this.offset,
+              page: this.currentPage,
               size: this.limit
             },
             headers: {
@@ -401,7 +401,7 @@
             handleCurrentChange(val) {
                 this.currentPage = val;
                 this.offset = (val - 1)*this.limit;
-                this.getItems()
+                this.getItems();
             },
             expand(row, status){
               console.log(row)
