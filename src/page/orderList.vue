@@ -142,6 +142,19 @@
             </div>
         </div>
         <el-dialog  title="配送地址选择" v-model="addressDialog">
+          <div class="checkout-title">
+            <span>配送方式</span>
+        </div>
+        <div class="shipping-method-wrap">
+            <div class="shipping-method">
+                <ul>
+                    <li :class="{'check':checked == 2}" @click="checked(2)">
+                        <div class="name">商家配送</div>
+                        <div class="price">3</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
                       <div class="checkout-title">
                         <span>配送地址</span>
                         </div>
@@ -160,7 +173,7 @@
 
                         <div slot="footer" class="dialog-footer">
                           <el-button @click="addressDialog = false">取 消</el-button>
-                          <el-button type="primary" @click="handleEditType(currentOrder,'2')">确 定</el-button>
+                          <el-button type="primary" @click="handleEditType(currentOrder,'2')">支付</el-button>
                         </div>
                         </div>
                     </el-dialog>
@@ -187,7 +200,8 @@
                 currenIndex:0,
                 filterAddress:[],
                 addressDialog:false,
-                currentOrder:null
+                currentOrder:null,
+                checked:2
             }
         },
     	components: {
@@ -236,6 +250,9 @@
 
       },
         methods: {
+          checked(num){
+            this.checked = num;
+          },
           editTypeDialog(row){
             this.currentOrder = row;
             this.$axios({

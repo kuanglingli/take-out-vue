@@ -71,6 +71,10 @@
                       size="mini"
                       @click="setEffect(scope.$index, scope.row,'1')"
                       v-if="scope.row.isEffect=='0'">生效</el-button>
+                      <el-button
+                      size="mini"
+                      @click="setEffect(scope.$index, scope.row,'0')"
+                      v-if="scope.row.isEffect=='1'">失效</el-button>
                     <el-button
                       size="mini"
                       @click="handleEdit(scope.$index, scope.row)"
