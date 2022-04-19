@@ -103,7 +103,7 @@
                       @click="handleEdit(shopScope.row,'8')" v-if="shopScope.row.orderStatus=='7'">同意退单</el-button>
                       <el-button
                       size="small"
-                      @click="handleEdit(shopScope.row,'6')" v-if="shopScope.row.orderStatus=='7'">拒绝退单</el-button>
+                      @click="handleEdit(shopScope.row,'-1')" v-if="shopScope.row.orderStatus=='7'">拒绝退单</el-button>
                     </div>
                     
                   
