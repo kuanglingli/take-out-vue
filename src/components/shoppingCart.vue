@@ -97,7 +97,7 @@
                                     <!--图片后面的文字-->
                                     <div class="cart-item-title">
                                         <div class="item-name">
-                                            {{ item.itemName + "--我是index的值"+index}}
+                                            {{ item.itemName }}
                                         </div>
                                     </div>
                                     
