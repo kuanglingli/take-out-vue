@@ -492,9 +492,9 @@ export default {
             this.productList.forEach(function (item,index) {
                if(item.checked){
                    _this.totalMoney += item.price * item.shoppingCount;
-                   _this.totalMoney += _this.deliveryFee;
                }
             });
+            _this.totalMoney += _this.deliveryFee;
         },
         // 点击删除 出现弹框
         delConfirm:function (item) {
